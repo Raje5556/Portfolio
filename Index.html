@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body id="#index">
+  <header>
+    <nav>
+
+      <div class="left">
+       Rajesh's Portfolio 
+      </div>
+      <div class="right">
+        <ul>
+          <li><a href="#index">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="#Contact">Contact Me</a></li>
+
+        </ul>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu(this)"></div>
+
+    </nav>
+  </header >
+  <main>
+    <section class="firstSection">
+       <div class="leftSection">Hi,My name is <span class="purple">Rajesh yadav</span>
+        <div>and i am passionate</div>
+          <div> wed developer</div>
+       </div>
+       <div class="rightSection">
+        <img src="img1.png">
+       </div>
+    </section>
+    <hr>
+    <section class="secondSection">
+     <div id="About">
+      <div class="container">
+        <div class="row">
+             <div class="about-col-1">
+                 <img src="img3.webp">
+             </div>
+             <div class="about-col-2">
+              <h1 class="sub-title">About Me</h1>
+              <br>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore non, aut adipisci doloribus nihil, eum provident aperiam dicta quibusdam </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+             
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>FRONTEND</span><br>HTML, CSS, JS, BOOTSTRAP, ANGULAR</li>
+                <li><span>BACKEND</span><br>C#, .NET CORE, .NET CORE MVC</li>
+                <li><span>DATABASE</span><br>SQL</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>DIPLOMA IN CSE</span><br>GOVERNMENT POLYTECHNIC AURAI, BHADOHI  (2021-24)</li>
+                <li><span>XII(UP BOARD)</span><br>KPID I C SAWARPUR, BHADOHI    (2020-21)</li>
+                <li><span>X(UP BOARD)</span><br>BHARATIYA I C PARSIPUR, BHADOHI (2018-19)</li>
+              </ul>
+            </div>
+            <!-- <div class="tab-contents">
+              <ul>
+                <li><span>Frontend</span><br>HTML, CSS, JS, BOOTSTRAP, ANGULAR</li>
+                <li><span>BACKEND</span><br>C#, .NET CORE, .NET CORE MVC</li>
+                <li><span>DATABASE</span><br>SQL</li>
+              </ul>
+            </div> -->
+            </div>
+        </div>
+       </div>
+
+     </div>
+
+    </section>
+    <hr>
+     <section class="thirdSection">
+      <div id="Contact">
+        <div class="container">
+          <div class="row">
+            <div class="contact-left">
+              <h1 class="sub-title">Contact Me</h1>
+              <p>yadavrajesh61907@gmail.com</p>
+              <p>+9696555671</p>
+              <div class="social-icons">
+                <a href=""></a>
+                <a href="Rajesh-K-Yadav.pdf" download class="btn btn2">Download CV</a>
+              </div>
+            </div>
+            <div class="contact-right">
+              <form name="frm">
+                    <input type="text " name="Name" placeholder="Your Name" required>       
+                    <input type="email" name="email" placeholder="your email " required>
+                    <textarea name="Message"  rows="6" placeholder="your message"></textarea>  
+                    <button type="submit" class="btn btn2">Submit</button>
+                  
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     </section>
+  </main>
+  <footer>
+    <div class="copyright">
+      <p>Copyright © 2025. Made with Love </p>
+    </div>
+  </footer>
+
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+   
+   
+    
+  function toggleMenu(button) {
+    const navLinks = document.querySelector("nav ul");
+    navLinks.classList.toggle("show");
+    button.classList.toggle("active");
+  }
+
+
+
+
+   </script>
+
+</body>
+</html>
